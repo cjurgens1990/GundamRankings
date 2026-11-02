@@ -1,0 +1,12 @@
+body {
+    background-color:black;
+    color: greenyellow;
+    font-family: Arial, sans-serif;
+}
+
+input, select, textarea, button {
+    background-color: black;
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    padding: 8px;
+}

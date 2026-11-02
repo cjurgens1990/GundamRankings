@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 app=Flask(__name__)
 
-@app.route("/gundamRating", methods=["GET", "POST"])
+
+@app.route("/", methods=["GET", "POST"])
 def gundamRatingPage():
     if request.method == "POST":
         nameOfGundam = request.form.get('nameOfGundam', '').strip()
