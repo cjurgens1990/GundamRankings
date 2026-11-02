@@ -1,0 +1,53 @@
+{%extends "base.html" %} {% block content %}
+
+<h2>Rate Your Gundam!</h2>
+
+{%if error%}
+<p class="error">{{error}}</p>
+{%endif%}
+
+<form method="POST">
+    <div>
+        <label for="nameOfGundam">Name of Gundam *:</label>
+        <input type="text" id="nameOfGundam" name="nameOfGundam" required />
+    </div>
+    <div>
+        <label for="price">Price *:</label>
+        <input type="text" id="price" name="price" required />
+    </div>
+    <div>
+        <label for="grade">Grade *:</label>
+        <select name="grade" id="grade" required>
+            <option value="">What is the Gundam's Grade</option>
+            <option value="hg">HG</option>
+            <option value="rg">RG</option>
+            <option value="mg">MG</option>
+            <option value="pg">PG</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="scale">Scale *:</label>
+        <select name="scale" id="scale" required>
+            <option value="">What is the Gundam's Scale</option>
+            <option value="1/144">1/144</option>
+            <option value="1/100">1/100</option>
+            <option value="1/60">1/60</option>
+            <option value="1/48">1/48</option>
+        </select>
+    </div>
+    <div>
+        <label for="manualComprehensibility">Manual Comprehensibility *:</label>
+        <input type="number" id="manualComprehensibility" name="manualComprehensibility" min="1" max="10" required />
+    </div>
+    <div>
+        <label for="buildFunness">Build Funness *:</label>
+        <input type="number" id="buildFunness" name="buildFunness" min="1" max="10" required />
+    </div>
+
+
+<button type="submit">Submit</button>
+
+</form>
+
+{% endblock content %}
