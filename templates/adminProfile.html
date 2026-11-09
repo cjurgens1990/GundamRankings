@@ -1,0 +1,27 @@
+{%extends 'base.html' %}
+{%block content%}
+<h1>All Profiles</h1>
+
+<table class=""table table-striped" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name of Gundam</th>
+        <th>Price</th>
+        <th>Grade</th>
+        <th>Scale</th>
+        <th>Manual Comprehensibility</th>
+        <th>Build Funness</th>
+    </tr>
+    {%for profile in profiles%}
+    <tr>
+        <td>{{profile.id}}</td>
+        <td>{{profile.nameOfGundam}}</td>
+        <td>{{profile.price}}</td>
+        <td>{{profile.grade}}</td>
+        <td>{{profile.scale}}</td>
+        <td>{{profile.manualComprehensibility}}</td>
+        <td>{{profile.buildFunness}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock content%}
